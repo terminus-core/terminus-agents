@@ -157,7 +157,7 @@ export async function initCommand(): Promise<void> {
         privateKey: basicAnswers.privateKey || undefined,
         apiKey,
         controlPlaneUrl: networkAnswers.controlPlaneUrl,
-        nodeId: generateNodeId(),
+        nodeId: generateNodeId(basicAnswers.agentType, basicAnswers.wallet),
         llmProvider: llmAnswers.llmProvider as 'grok' | 'ollama' | 'openai-compatible',
         llmBaseUrl: llmBaseUrl || undefined,
         llmModel: llmModel || undefined,

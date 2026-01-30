@@ -52,11 +52,9 @@ export function saveConfig(config: AgentConfig): void {
     writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
 }
 
-export function generateNodeId(): string {
-    const chars = 'abcdef0123456789';
-    let id = 'agent-';
-    for (let i = 0; i < 8; i++) {
-        id += chars[Math.floor(Math.random() * chars.length)];
-    }
-    return id;
+export function generateNodeId(agentType: string, wallet: string): string {
+    // Create readable node ID: agentType-walletPrefix
+    // Example: health-advisor-0x78f8
+    const walletPrefix = wallet.slice(0, 6).toLowerCase();
+    return `${agentType}-${walletPrefix}`;
 }
