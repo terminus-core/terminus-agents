@@ -1,0 +1,40 @@
+{
+    "name": "terminus-agent",
+    "version": "0.1.0",
+    "description": "Standalone agent runner for Terminus network",
+    "type": "module",
+    "main": "dist/index.js",
+    "bin": {
+        "terminus-agent": "./bin/terminus-agent.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/index.ts",
+        "start": "node dist/index.js"
+    },
+    "dependencies": {
+        "chalk": "^5.3.0",
+        "commander": "^12.1.0",
+        "dotenv": "^16.4.5",
+        "ethers": "^6.16.0",
+        "inquirer": "^9.2.23",
+        "ws": "^8.18.0"
+    },
+    "devDependencies": {
+        "@types/inquirer": "^9.0.7",
+        "@types/node": "^20.11.0",
+        "@types/ws": "^8.5.10",
+        "tsx": "^4.7.0",
+        "typescript": "^5.4.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "keywords": [
+        "terminus",
+        "agent",
+        "ai",
+        "distributed"
+    ],
+    "license": "MIT"
+}
