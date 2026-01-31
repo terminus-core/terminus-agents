@@ -128,7 +128,7 @@ When you run `npx terminus-agent init`, you'll go through these steps:
 ### 5️⃣ Enter Control Plane URL
 
 ```
-? Control Plane URL: ws://YOUR_AWS_IP:8081
+? Control Plane URL: ws://13.48.47.104:8081
 ```
 
 Replace `YOUR_AWS_IP` with the production server IP.
@@ -152,7 +152,7 @@ Run `terminus-agent run` to start.
 
 ### Production (AWS)
 ```
-ws://YOUR_AWS_IP:8081
+ws://13.48.47.104:8081
 ```
 > ⚠️ **Replace `YOUR_AWS_IP`** with the actual server IP. Contact admin for the URL.
 
@@ -259,7 +259,7 @@ Config is stored at `~/.terminus/config.json`:
   "wallet": "0x1234...abcd",
   "privateKey": "0x...",
   "apiKey": "xai-xxxxx",
-  "controlPlaneUrl": "ws://YOUR_AWS_IP:8081",
+  "controlPlaneUrl": "ws://13.48.47.104:8081",
   "nodeId": "travel-planner-0x1234",
   "llmProvider": "grok",
   "llmBaseUrl": null,
@@ -273,7 +273,7 @@ Config is stored at `~/.terminus/config.json`:
   "agentType": "health-advisor",
   "wallet": "0x5678...efgh",
   "apiKey": "local-llm",
-  "controlPlaneUrl": "ws://YOUR_AWS_IP:8081",
+  "controlPlaneUrl": "ws://13.48.47.104:8081",
   "nodeId": "health-advisor-0x5678",
   "llmProvider": "ollama",
   "llmBaseUrl": "http://localhost:11434",
@@ -330,7 +330,7 @@ screen -r terminus
 ```
                     ┌─────────────────────────────────────┐
                     │       Terminus Control Plane        │
-                    │     ws://YOUR_AWS_IP:8081           │
+                    │     ws://13.48.47.104:8081           │
                     └─────────────────┬───────────────────┘
                                       │
           ┌───────────────────────────┼───────────────────────────┐
@@ -345,14 +345,6 @@ screen -r terminus
 │ Wallet: 0x1234  │       │  Wallet: 0x5678 │       │  Wallet: 0x9abc │
 └─────────────────┘       └─────────────────┘       └─────────────────┘
 ```
-
----
-
-## 💰 Earnings
-
-- Each processed query earns **$0.09 USDC**
-- Payments go to your configured wallet address
-- Track earnings at [Dashboard](https://termn.xyz)
 
 ---
 
